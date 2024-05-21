@@ -1,8 +1,31 @@
 import './register.scss'
-
+import { Link } from 'react-router-dom'
 const Register = () => {
     return (
-        <div className='register'>Register</div>
+        <div className='register'>
+            <div className="card">
+                <div className="left">
+                    <h1>Register</h1>  
+                    <form action="">
+                        <input type="text" placeholder='Username'/>
+                        <input type="text" placeholder='Name'/>
+                        <input type='mail' placeholder='Email'/>
+                        <input type="password" placeholder='Password'/>
+                        <button>Register</button>
+                    </form>
+                </div>
+
+                <div className="right">
+                    <h1>Enter <br /> The Gallery</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur, felis sit amet convallis egestas, quam purus dapibus arcu, ac condimentum quam justo vitae lacus. Sed congue metus eget malesuada tempor.
+                    </p>
+                    <span>Do you have an account ? </span>
+                    <Link to={'/login'}>
+                    <button>Login</button>
+                    </Link>
+                </div>
+            </div>
+        </div>
     )
 }
 

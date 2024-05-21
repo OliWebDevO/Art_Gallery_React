@@ -1,8 +1,30 @@
 import './login.scss'
+// import img1 from '../img/art1.jpeg'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     return (
-        <div className='login'>Login</div>
+        <div className='login'>
+            <div className="card">
+                <div className="left">
+                    <h1>Art <br /> Gallery</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur, felis sit amet convallis egestas, quam purus dapibus arcu, ac condimentum quam justo vitae lacus. Sed congue metus eget malesuada tempor.
+                    </p>
+                    <span>Don't you have an account yet ?</span>
+                    <Link to={'/register'}>
+                    <button>Register</button>
+                    </Link>
+                </div>
+                <div className="right">
+                    <h1>Login</h1>  
+                    <form action="">
+                        <input type="text" placeholder='Username'/>
+                        <input type="password" placeholder='Password'/>
+                        <button>Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     )
 }
 
