@@ -24,10 +24,11 @@ const currentUser = true;
 
 // Layout of components
 const Layout = () => {
+  
   return (
     <div>
       <NavBar/>
-      <div style={{display: "flex"}}>
+      <div className='app' style={{display: "flex"}}>
         <LeftBar/>
         <Outlet/>
         <RightBar/>
