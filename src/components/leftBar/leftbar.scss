@@ -1,9 +1,14 @@
+@import "../../style.scss";
+
 .leftbar {
+    @include themify($themes) {
     width: 15vw;
     position: sticky;
     top: 70.5px;
     height: calc(100vh - 70.5px);
     overflow: scroll;
+    background-color: themed("bg");
+    color : themed("textColor");
     &::-webkit-scrollbar{
         display: none;
     }
@@ -12,7 +17,7 @@
         hr {
             border: none;
             height: 0.5px;
-            background-color: lightgrey;
+            background-color: themed('border');
             width: 60%;
             margin-right: 40%;
         }
@@ -54,4 +59,5 @@
             }
         }
     }
+}
 }

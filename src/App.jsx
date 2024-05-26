@@ -1,5 +1,6 @@
 import './app.scss'
-import React from 'react';
+import './style.scss'
+import React, { useContext } from 'react';
 import { Navigate } from "react-router-dom";
 import Login from './pages/login/Login'
 import Register from './pages/register/Register'
@@ -15,18 +16,22 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
+import { DarkModeContext } from './context/darkModeContext';
+import { AuthContext } from './context/authContext';
 
 // THE APP
 function App() {
 
-// For design part, user cant be set to false
-const currentUser = true;
+// Context API usage, for Auth and DarkMode
+const {currentUser} = useContext(AuthContext);
+
+const {darkMode} = useContext(DarkModeContext);
 
 // Layout of components
 const Layout = () => {
   
   return (
-    <div>
+    <div className={`theme-${darkMode? "dark" : "light"}`}>
       <NavBar/>
       <div className='app' style={{display: "flex"}}>
         <LeftBar/>

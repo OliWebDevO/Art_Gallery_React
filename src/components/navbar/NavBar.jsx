@@ -8,29 +8,36 @@ import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import SearchIcon from '@mui/icons-material/Search';
+import { useContext } from 'react';
+import { DarkModeContext } from '../../context/darkModeContext';
+import { AuthContext } from '../../context/authContext';
 
 const NavBar = () => {
+
+    const {toggle, darkMode} = useContext(DarkModeContext)
+    const {currentUser} = useContext(AuthContext)
+
     return (
         <div className='navbar'>
             <div className="left">
                 <Link to={"/"} style={{textDecoration:"none", color:"black"}}>
                     <div className="logo">Art Gallery</div>
                 </Link>
-                <HomeOutlinedIcon/>
-                <DarkModeOutlinedIcon/>
-                <GridViewIcon/>
+                <HomeOutlinedIcon className='icon'/>
+                {darkMode? <LightModeIcon className='icon' onClick={toggle}/> : <DarkModeOutlinedIcon className='icon' onClick={toggle}/>}
+                <GridViewIcon className='icon'/>
                 <div className="search">
                     <SearchIcon/>
                     <input type="text" name="" id="" placeholder='Search...' />
                 </div>
             </div>
             <div className="right">
-                <PermIdentityIcon/>
-                <MailOutlineIcon/>
-                <NotificationsNoneIcon/>
+                <PermIdentityIcon className='icon'/>
+                <MailOutlineIcon className='icon'/>
+                <NotificationsNoneIcon className='icon'/>
                 <div className="user">
-                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="" />
-                    <span>Oliver</span>
+                    <img src={currentUser.profilePic} alt="" />
+                    <span>{currentUser.name}</span>
                 </div>
             </div>
         </div>
