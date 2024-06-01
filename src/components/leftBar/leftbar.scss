@@ -2,6 +2,9 @@
 
 .leftbar {
     @include themify($themes) {
+        -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow : 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
     width: 15vw;
     position: sticky;
     top: 70.5px;
@@ -13,6 +16,7 @@
         display: none;
     }
     .container {
+        
         margin-left: 20px;
         hr {
             border: none;
