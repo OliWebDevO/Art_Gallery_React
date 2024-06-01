@@ -12,6 +12,7 @@
     height: 50px;
     border-bottom: 1px solid themed('border');
     position: sticky;
+    z-index: 5;
     top: 0;
     background-color: themed("bg");
     color: themed("textColor");

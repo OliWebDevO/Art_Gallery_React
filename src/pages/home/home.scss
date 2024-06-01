@@ -3,7 +3,10 @@
     @include themify($themes) {
     background-color: themed('bgSoft');
     color: themed('textColor');
-    width: 65vw;
+    width: 60vw;
     padding: 20px 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 }
