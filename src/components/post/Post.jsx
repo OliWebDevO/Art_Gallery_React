@@ -2,11 +2,15 @@ import './post.scss'
 import React from 'react';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
 import { Link } from 'react-router-dom';
 
 const Post = ({post}) => {
+
+    const liked = false;
+
     return (
         <div className="post">
             <div className="post-head">
@@ -28,7 +32,7 @@ const Post = ({post}) => {
                 <img src={post.img} alt="" />
                 <div className="post-reactions">
                     <div className="post-like">
-                        <FavoriteBorderIcon className='icon'/>
+                        {liked ? <FavoriteIcon className='icon'/> : <FavoriteBorderIcon className='icon'/>}
                         <a href="">Like</a>
                     </div>
                     <div className="post-like">
@@ -39,7 +43,6 @@ const Post = ({post}) => {
                         <ShareIcon className='icon'/>
                         <a href="">Share</a>
                     </div>
-
                 </div>
             </div>
         </div>
