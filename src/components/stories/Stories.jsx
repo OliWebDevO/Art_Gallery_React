@@ -32,7 +32,7 @@ const Stories = () => {
                 <div className='add'><AddCircleOutlineIcon className='icon'/></div>
             </div>
             {stories.map(story => (
-                <div className='story'>
+                <div className='story' key={story.id}>
                     <img src={story.img} alt="" />
                     <p>{story.name}</p>
                 </div>
