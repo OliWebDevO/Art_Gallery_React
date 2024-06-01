@@ -4,6 +4,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
+import { Link } from 'react-router-dom';
 
 const Post = ({post}) => {
     return (
@@ -12,7 +13,9 @@ const Post = ({post}) => {
                 <img className='user-img' src={post.profilePic} alt="" />
                 <div className="user-infos">
                     <div className="user-info">
-                        <p>{post.name}</p>
+                        <Link className='user-link' to={`/profile/${post.userId}`}>
+                        <span>{post.name}</span>
+                        </Link>
                         <p className='small'>a few seconds ago</p>
                     </div>
                     <div className="user-infos-icon">

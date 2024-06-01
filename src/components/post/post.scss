@@ -27,13 +27,16 @@
             .user-info {
                 display: flex;
                 flex-direction: column;
-                p {
-                    margin: 0;
+                .user-link {
+                    text-decoration: none;
+                    color: themed("textColor");
                     font-size: 1.8ch;
                     font-weight: 500;
                 }
                 .small {
                     font-size: 1.3ch;
+                    margin: 0;
+                    padding: 0;
                 }
             }
             .icon {

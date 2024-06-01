@@ -2,6 +2,7 @@ import './posts.scss'
 import Post from '../post/Post';
 
 const Posts = () => {
+    
     const posts = [
         {
           "id": 1,
@@ -44,6 +45,7 @@ const Posts = () => {
           "desc": "Rolling sand dunes under a clear blue sky."
         }
       ]
+
     return (
         <div className="posts">
             {posts.map(post => (
