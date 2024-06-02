@@ -1,5 +1,7 @@
 import './posts.scss'
 import Post from '../post/Post';
+import ImageIcon from '@mui/icons-material/Image';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
 const Posts = () => {
     
@@ -48,6 +50,21 @@ const Posts = () => {
 
     return (
         <div className="posts">
+            <div className="my-post">
+              <div className="post-text">
+                <img src="https://images.pexels.com/photos/4927361/pexels-photo-4927361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                <textarea name="" id="" placeholder=" What's on your mind ? "></textarea>
+              </div>
+              <div className="message">
+                <div className="options">
+                  <ImageIcon className='icon'/>
+                  <CameraAltIcon className='icon'/>
+                </div>
+                <div className="send-msg">
+                  <button>Send</button>
+                </div>
+              </div>
+            </div>
             {posts.map(post => (
                <Post post={post} key ={post.id}/>
             ))}
