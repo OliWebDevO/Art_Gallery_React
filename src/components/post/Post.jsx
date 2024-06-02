@@ -12,7 +12,7 @@ const Post = ({post}) => {
     
     const [like, setLike] = useState(false);
     const [commentOpen, setCommentOpen] = useState(false);
-
+    
 
 
     return (

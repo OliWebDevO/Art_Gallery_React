@@ -28,7 +28,9 @@ const Login = () => {
                     <form action="">
                         <input type="text" placeholder='Username'/>
                         <input type="password" placeholder='Password'/>
+                        <Link to ={'/'}>
                         <button onClick={handleLogin}>Login</button>
+                        </Link>
                     </form>
                 </div>
             </div>

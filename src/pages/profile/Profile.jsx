@@ -2,6 +2,22 @@ import Post from '../../components/post/Post';
 import './profile.scss'
 import { useContext } from 'react'
 import {AuthContext} from '../../context/authContext'
+import FacebookIcon from '@mui/icons-material/Facebook';
+import XIcon from '@mui/icons-material/X';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PinterestIcon from '@mui/icons-material/Pinterest';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import WebIcon from '@mui/icons-material/Web';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import MoreVertIcon from '@mui/icons-material/MoreVert';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import FormatQuoteIcon from '@mui/icons-material/FormatQuote';
+import imgMiniGallery1 from '../../assets/gallery/gallery1.jpeg'
+import imgMiniGallery2 from '../../assets/gallery/gallery48.jpeg'
+import imgMiniGallery3 from '../../assets/gallery/gallery32.jpeg'
+import imgMiniGallery4 from '../../assets/gallery/gallery60.jpeg'
+import imgMiniGallery5 from '../../assets/gallery/gallery4.jpeg'
+import imgMiniGallery6 from '../../assets/gallery/gallery40.jpeg'
 
 const Profile = () => {
 
@@ -58,7 +74,50 @@ const Profile = () => {
                     <img className='profile-pic' src="https://images.pexels.com/photos/4927361/pexels-photo-4927361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                 </div>
                 <div className="profile-infos">
-                    
+                    <div className="profile-title">
+                        <div className="profile-name">
+                            <h3>{currentUser.name}</h3>
+                        </div>
+                        <div className="profile-interact">
+                            <button>Follow</button>
+                            <MoreVertIcon className='icon'/>
+                            <MailOutlineIcon className='icon'/>
+                        </div>
+                    </div>
+                    <div className="profile-connect">
+                        <div className="profile-social">
+                            <InstagramIcon className='icon'/>
+                            <PinterestIcon className='icon'/>
+                            <FacebookIcon className='icon'/>
+                            <LinkedInIcon className='icon'/>
+                            <XIcon className='icon'/>
+                        </div>
+                        <div className="profile-find">
+                            <div className="profile-location">
+                                <LocationOnIcon className='icon'/>
+                                <span>Bruxelles, Belgium</span>
+                            </div>
+                            <div className="profile-website">
+                                <WebIcon className='icon'/>
+                                <span>Website</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="profile-desc">
+                        <p>
+                            Being a unicorn is an enchanting experience unlike any other. Unlike humans, unicorns possess a magical aura that exudes beauty and grace. Their days are filled with adventure as they gallop through mystical forests and prance under rainbows. Unicorns have the unique ability to heal and bring joy to those around them, a power humans can only dream of. With a shimmering horn, unicorns can tap into ancient magic, creating miracles and wonders. Their lives are unburdened by the mundane worries that humans face daily. Unicorns communicate with nature, forming bonds with woodland creatures and the elements. 
+                        </p>
+                        <FormatQuoteIcon className='icon abs a1'/>
+                        <FormatQuoteIcon className='icon abs a2'/>
+                    </div>
+                    <div className="profile-gallery">
+                       <img className='profil-grid-item-1' src={imgMiniGallery1} alt="" />
+                       <img className='profil-grid-item-2' src={imgMiniGallery2} alt="" />
+                       <img className='profil-grid-item-3' src={imgMiniGallery3} alt="" />
+                       <img className='profil-grid-item-4' src={imgMiniGallery4} alt="" />
+                       <img className='profil-grid-item-5' src={imgMiniGallery5} alt="" />
+                       <img className='profil-grid-item-6' src={imgMiniGallery6} alt="" />
+                    </div>
                 </div>
                 <div className="posts">
                     {posts.map(post => (

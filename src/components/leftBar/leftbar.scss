@@ -2,21 +2,24 @@
 
 .leftbar {
     @include themify($themes) {
-        -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
-        -moz-box-shadow : 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
-        box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
     width: 15vw;
     position: sticky;
     top: 70.5px;
     height: calc(100vh - 70.5px);
     overflow: scroll;
-    background-color: themed("bg");
+    background-color: themed("bgSoft");
     color : themed("textColor");
     &::-webkit-scrollbar{
         display: none;
     }
     .container {
-        margin-left: 20px;
+        -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow : 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        margin-left: 10px;
+        background-color: themed('bg');
+        padding:  0 20px;
+        border-radius: 8px;
         hr {
             border: none;
             height: 0.5px;
@@ -25,8 +28,10 @@
             margin-right: 40%;
         }
         .menu {
+            padding-bottom: 10px;
             .user {
                 margin-top: 30px;
+                padding-top: 20px;
                 margin-bottom: 20px;
                 display: flex;
                 align-items: center;
@@ -42,7 +47,7 @@
                     object-position: center;
                 }
                 span {
-                    
+                    font-weight: 500;
                 }
             }
             .item {
