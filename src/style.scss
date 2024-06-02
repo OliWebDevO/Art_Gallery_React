@@ -43,3 +43,13 @@ $themes:(
         @content;
     }
 }
+@mixin tablet {
+    @media (max-width: 960px) {
+        @content;
+    }
+}
+@mixin smallscreen {
+    @media (max-width: 1380px) {
+        @content;
+    }
+}

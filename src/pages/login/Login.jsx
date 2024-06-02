@@ -31,6 +31,9 @@ const Login = () => {
                         <Link to ={'/'}>
                         <button onClick={handleLogin}>Login</button>
                         </Link>
+                        <Link to={'/register'}>
+                        <button className='register-btn'>Register</button>
+                        </Link>
                     </form>
                 </div>
             </div>

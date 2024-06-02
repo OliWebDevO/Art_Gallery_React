@@ -12,13 +12,14 @@ const Register = () => {
                         <input type='mail' placeholder='Email'/>
                         <input type="password" placeholder='Password'/>
                         <button>Register</button>
+                        <Link to={'/login'}>
+                        <button className='login-btn'>Login</button>
+                        </Link>
                     </form>
                 </div>
 
                 <div className="right">
                     <h1>Enter <br /> The Gallery</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur, felis sit amet convallis egestas, quam purus dapibus arcu, ac condimentum quam justo vitae lacus. Sed congue metus eget malesuada tempor.
-                    </p>
                     <span>Do you have an account ? </span>
                     <Link to={'/login'}>
                     <button>Login</button>

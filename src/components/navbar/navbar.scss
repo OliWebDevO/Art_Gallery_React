@@ -40,10 +40,22 @@
                 &:focus {
                     outline: none;
                 }
+                @include mobile {
+                    display: none;
+                }
+                @include tablet {
+                    display: none;
+                }
+                @include smallscreen {
+                    width: 200px;
+                }
             }
         }
     }
     .right {
+        @include mobile {
+            display: none;
+        }
         display: flex;
         align-items: center;
         gap: 30px;
