@@ -34,11 +34,12 @@ const NavBar = () => {
             <div className="right">
                 <PermIdentityIcon className='icon'/>
                 <MailOutlineIcon className='icon'/>
-                <NotificationsNoneIcon className='icon'/>
-                <div className="user">
+                <NotificationsNoneIcon className='icon'/>      
+                <Link className="user" to={`/profile/1`}>
                     <img src={currentUser.profilePic} alt="" />
                     <span>{currentUser.name}</span>
-                </div>
+                </Link>
+                
             </div>
         </div>
     )

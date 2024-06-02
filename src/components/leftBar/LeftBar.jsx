@@ -13,10 +13,10 @@ const LeftBar = () => {
         <div className='leftbar'>
             <div className="container">
                 <div className="menu">
-                    <div className="user">
+                    <Link className="user" to={`/profile/1`}>
                         <img src={currentUser.profilePic} alt="" />
                         <span>{currentUser.name}</span>
-                    </div>
+                    </Link>
                     <div className="item">
                         <img className='item-icon' src={img1} alt="" />
                         <span>

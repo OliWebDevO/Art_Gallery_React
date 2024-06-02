@@ -44,7 +44,7 @@ const Posts = () => {
           "profilePic": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg",
           "desc": "Rolling sand dunes under a clear blue sky."
         }
-      ]
+      ];
 
     return (
         <div className="posts">

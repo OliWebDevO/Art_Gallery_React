@@ -11,7 +11,7 @@ export const AuthContextProvider = ({children}) => {
         setCurrentUser({
             id:1,
             name:"John Travolta",
-            profilePic:"https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+            profilePic:"https://images.pexels.com/photos/4927361/pexels-photo-4927361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         });
     }
     useEffect(()=> {

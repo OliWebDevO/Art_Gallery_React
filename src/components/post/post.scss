@@ -54,7 +54,7 @@
         p {
             line-height: 2.8ch;
             text-align: justify;
-            font-size: 1.5ch;
+            font-size: 1.8ch;
         }
         .post-reactions {
             margin-top: 1ch;
@@ -62,10 +62,11 @@
             justify-content: start;
             align-items: center;
             gap: 2ch;
-            a {
+            span {
                 color: themed('textColor');
                 text-decoration: none;
                 font-size: 1.4ch;
+                cursor: pointer;
             }
             .icon {
                 cursor: pointer;

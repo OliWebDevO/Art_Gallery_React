@@ -1,20 +1,26 @@
 import './post.scss'
-import React from 'react';
+import React, { useState } from 'react';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CommentIcon from '@mui/icons-material/Comment';
 import ShareIcon from '@mui/icons-material/Share';
 import { Link } from 'react-router-dom';
+import Comments from '../comments/Comments';
 
 const Post = ({post}) => {
+    
+    const [like, setLike] = useState(false);
+    const [commentOpen, setCommentOpen] = useState(false);
 
-    const liked = false;
+
 
     return (
         <div className="post">
             <div className="post-head">
-                <img className='user-img' src={post.profilePic} alt="" />
+                <Link className='user-link' to={`/profile/${post.userId}`}>
+                    <img className='user-img' src={post.profilePic} alt="" />
+                </Link>
                 <div className="user-infos">
                     <div className="user-info">
                         <Link className='user-link' to={`/profile/${post.userId}`}>
@@ -32,18 +38,19 @@ const Post = ({post}) => {
                 <img src={post.img} alt="" />
                 <div className="post-reactions">
                     <div className="post-like">
-                        {liked ? <FavoriteIcon className='icon'/> : <FavoriteBorderIcon className='icon'/>}
-                        <a href="">Like</a>
+                        {like ? <FavoriteIcon onClick={()=> setLike(!like)} className='icon'/> : <FavoriteBorderIcon onClick={()=> setLike(!like)} className='icon'/>}
+                        <span onClick={()=> setLike(!like)} href="">Like</span>
                     </div>
                     <div className="post-like">
-                        <CommentIcon className='icon'/>
-                        <a href="">Comment</a>
+                        <CommentIcon onClick={()=>setCommentOpen(!commentOpen)} className='icon'/>
+                        <span onClick={()=>setCommentOpen(!commentOpen)} href="">Comment</span>
                     </div>
                     <div className="post-like">
                         <ShareIcon className='icon'/>
-                        <a href="">Share</a>
+                        <span href="">Share</span>
                     </div>
                 </div>
+                {commentOpen && <Comments/>}
             </div>
         </div>
     )
